@@ -15,7 +15,7 @@ public class Prodotto {
 
 
 // CONSTRUCTORS
-	Prodotto(String marca, String nome, int prezzo, int iva) {
+	Prodotto(String marca, String nome, float prezzo, float iva) {
 		this.marca = marca;
 		this.nome = nome;
 		this.prezzo = prezzo;

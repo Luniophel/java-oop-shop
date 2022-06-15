@@ -4,8 +4,14 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		//Testo funzionalità di Prodotto() e stampaProdotto()
-		Prodotto scarpeNike = new Prodotto("Nike","Scarpe Sportive", 55, 24);
+		//Dati fissi
+		float iva = 24;
+		
+		//Lista prodotti
+		Prodotto scarpeNike = new Prodotto("Nike","Scarpe Sportive", 55, iva);
+		Prodotto canottaPuma = new Prodotto("Puma", "Canottiera Sportiva unisex", 40, iva);
+		
+		//Testo stampaProdotto()
 		scarpeNike.stampaProdotto();
 		
 		//Calcolo prezzo con iva
