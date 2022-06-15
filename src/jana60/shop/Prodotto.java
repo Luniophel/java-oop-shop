@@ -26,7 +26,7 @@ public class Prodotto {
 	
 	// Stampa i dati del prodotto
 	void stampaProdotto(){
-		System.out.println	("Nome prodotto: " + nome + "\nMarca: " + marca + "\nPrezzo: " + prezzo);
+		System.out.println	("Nome prodotto: " + nome + "\nMarca: " + marca + "\nPrezzo: " + df.format(prezzo));
 	}
 	
 	// Calcola il prezzo comprensivo di iva
@@ -38,7 +38,7 @@ public class Prodotto {
 	
 	// Formatta il prezzo restituendo una stringa con numero fisso di decimali e carattere €, e stampa
 	void stampaPrezzoIva() {
-		System.out.println("Il prezzo con IVA di questo prodotto è: " + df.format(prezzoIva));
+		System.out.println("Prezzo+IVA: " + df.format(prezzoIva));
 	}
 
 }

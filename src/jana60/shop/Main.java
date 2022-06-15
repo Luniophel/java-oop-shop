@@ -8,6 +8,7 @@ public class Main {
 		Prodotto scarpeNike = new Prodotto("Nike","Scarpe Sportive", 55, 24);
 		scarpeNike.stampaProdotto();
 		
+		//Calcolo prezzo con iva
 		scarpeNike.calcPrezzoIva();
 		
 		//Testo stampaPrezzoIva()
