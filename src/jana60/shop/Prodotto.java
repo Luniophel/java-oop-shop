@@ -1,6 +1,7 @@
 package jana60.shop;
 
 import java.text.DecimalFormat;
+import java.util.Scanner;
 
 public class Prodotto {
 
@@ -11,7 +12,9 @@ public class Prodotto {
 	float iva;
 	float prezzoIva;
 	
+// IMPORTS
 	DecimalFormat df = new DecimalFormat("#.00€");
+	Scanner prScan = new Scanner(System.in);
 
 
 // CONSTRUCTORS
@@ -20,6 +23,10 @@ public class Prodotto {
 		this.nome = nome;
 		this.prezzo = prezzo;
 		this.iva = iva;
+	}
+	
+	Prodotto() {
+		
 	}
 
 // METHODS 
@@ -47,5 +54,17 @@ public class Prodotto {
 		calcPrezzoIva();
 		stampaPrezzoIva();
 	}
-
+	
+	void creaProdotto() {
+		System.out.print("\nMarca: ");
+		marca = prScan.nextLine();
+		System.out.print("\nNome: ");
+		nome = prScan.nextLine();
+		System.out.print("\nPrezzo: ");
+		String tempScan = prScan.nextLine();
+		prezzo = Float.parseFloat(tempScan);
+		System.out.print("\nIVA: ");
+		tempScan = prScan.nextLine();
+		iva = Float.parseFloat(tempScan);
+	}
 }
