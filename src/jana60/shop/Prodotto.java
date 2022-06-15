@@ -1,12 +1,18 @@
 package jana60.shop;
 
+import java.text.DecimalFormat;
+
 public class Prodotto {
 
 // ATTRIBUTES
 	String marca;
 	String nome;
-	int prezzo;
-	int iva;
+	float prezzo;
+	float iva;
+	float prezzoIva;
+	
+	DecimalFormat df = new DecimalFormat("#.00€");
+
 
 // CONSTRUCTORS
 	Prodotto(String marca, String nome, int prezzo, int iva) {
@@ -24,7 +30,15 @@ public class Prodotto {
 	}
 	
 	// Calcola il prezzo comprensivo di iva
-	// Formatta il prezzo restituendo una stringa con numero fisso di decimali e
-	// carattere €
+	float calcPrezzoIva() {
+		iva /= 100;
+		prezzoIva = prezzo + (prezzo * iva);
+		return prezzoIva;
+	}
+	
+	// Formatta il prezzo restituendo una stringa con numero fisso di decimali e carattere €, e stampa
+	void stampaPrezzoIva() {
+		System.out.println("Il prezzo con IVA di questo prodotto è: " + df.format(prezzoIva));
+	}
 
 }
