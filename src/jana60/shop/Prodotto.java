@@ -2,13 +2,13 @@ package jana60.shop;
 
 public class Prodotto {
 
-	// Attributi
+// ATTRIBUTES
 	String marca;
 	String nome;
 	int prezzo;
 	int iva;
 
-	// Costruttori
+// CONSTRUCTORS
 	Prodotto(String marca, String nome, int prezzo, int iva) {
 		this.marca = marca;
 		this.nome = nome;
@@ -16,7 +16,13 @@ public class Prodotto {
 		this.iva = iva;
 	}
 
-	// Metodi
+// METHODS 
+	
+	// Stampa i dati del prodotto
+	void stampaProdotto(){
+		System.out.println	("Nome prodotto: " + nome + "\nMarca: " + marca + "\nPrezzo: " + prezzo);
+	}
+	
 	// Calcola il prezzo comprensivo di iva
 	// Formatta il prezzo restituendo una stringa con numero fisso di decimali e
 	// carattere €
