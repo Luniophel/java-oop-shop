@@ -25,10 +25,8 @@ public class Prodotto {
 		this.iva = iva;
 	}
 	
-	Prodotto() {
-		
-	}
-
+	Prodotto(){}
+	
 // METHODS 
 	
 	// Stampa i dati del prodotto
@@ -54,17 +52,5 @@ public class Prodotto {
 		calcPrezzoIva();
 		stampaPrezzoIva();
 	}
-	
-	void creaProdotto() {
-		System.out.print("\nMarca: ");
-		marca = prScan.nextLine();
-		System.out.print("\nNome: ");
-		nome = prScan.nextLine();
-		System.out.print("\nPrezzo: ");
-		String tempScan = prScan.nextLine();
-		prezzo = Float.parseFloat(tempScan);
-		System.out.print("\nIVA: ");
-		tempScan = prScan.nextLine();
-		iva = Float.parseFloat(tempScan);
-	}
+
 }

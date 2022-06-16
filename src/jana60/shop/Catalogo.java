@@ -9,23 +9,43 @@ public class Catalogo {
 		//Stampa catalogo
 		//Stampa catalogo in forma tabellare
 		
+		//Variabili
+		String marca, nome;
+		float prezzo;
+		float iva;
+		
 		Scanner scan = new Scanner(System.in);
 		
-//		int counter = 0;
-//		boolean done = false;
+		//Creo il catalogo
+		Prodotto prod[] = new Prodotto[5];
+		marca = "area";
 		
-		//Aggiungi n prodotti al catalogo
+		for(int i=0; i<5; i++) {
+			
+			//Chiedo i dati del prodotto
+			System.out.print("\nMarca: ");
+			marca = scan.nextLine();
+			System.out.print("\nNome: ");
+			nome = scan.nextLine();
+			System.out.print("\nPrezzo: ");
+			String tempScan = scan.nextLine();
+			prezzo = Float.parseFloat(tempScan);
+			System.out.print("\nIVA: ");
+			tempScan = scan.nextLine();
+			iva = Float.parseFloat(tempScan);
+			
+			//Creo il prodotto con i dati inseriti con indice catalogo
+			prod[i] = new Prodotto(marca, nome, prezzo, iva);
+			prod[i].calcPrezzoIva();
+		}
 		
-		System.out.println("Aggiungi un prodotto:");
-		Prodotto prodotto1 = new Prodotto();
-		Prodotto prodotto2 = new Prodotto();
+		System.out.format("%24s %24s %24s %1s %24s %1s", "Marca", "Modello", "Prezzo", "(€)", "Prezzo+IVA", "(€)");
+		System.out.println("\n");
 		
-		prodotto1.creaProdotto();
-		prodotto2.creaProdotto();
-		
-		prodotto1.stampaTuttiDati();
-		prodotto2.stampaTuttiDati();
-		
+		for(int i=0; i<5; i++) {
+			System.out.format("%24s %24s %24.2f %1s %24.2f %1s", prod[i].marca, prod[i].nome, prod[i].prezzo,"€", prod[i].prezzoIva,"€");
+			System.out.println();
+		}
 		scan.close();
 	}
 
